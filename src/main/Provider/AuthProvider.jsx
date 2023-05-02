@@ -4,12 +4,12 @@ import app from "./firebase.config";
 
 
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 const auth = getAuth(app);  
-export const AuthProvider = ({ children }) => {
+ const AuthProvider = ({ children }) => {
   
    const registerUser = (name,email,password)=>{
-    return createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth ,name, email, password)
 
    } 
     
