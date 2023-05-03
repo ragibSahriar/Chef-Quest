@@ -5,6 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 // import SocialLoginBtn from "./../SocialLoginBtn/SocialLoginBtn";
 
 
+
+
+
+
 const Register = () => {
   const { registerUser } = useContext(AuthContext);
 
@@ -29,7 +33,7 @@ const Register = () => {
         .catch((err) => {
           console.log(err.message);
         });
-        navigate("/")
+        
     }
   };
   return (

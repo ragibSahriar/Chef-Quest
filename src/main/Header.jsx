@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
 // import { useHistory } from 'react-router';
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
 
 const Header = () => {
   const { user,logOut } = useContext(AuthContext);
@@ -18,7 +20,8 @@ const Header = () => {
   };
   return (
    
-      <div className="bg-sky-100 flex justify-around   mx-auto items-center">
+     <div>
+       <div className="bg-sky-100 flex justify-around   mx-auto items-center">
         <div className="">
           <a className="btn btn-ghost normal-case text-xl">Chef's Quest</a>
         </div>
@@ -43,8 +46,11 @@ const Header = () => {
           
           )}
         </div>
-        <img className="w-12 rounded-3xl" src={user?.photoURL}/>
+        <img className="w-12 rounded-3xl hover:{user?.name}" src={user?.photoURL}/>
+        
       </div>
+      
+     </div>
     // </div>
   );
 };

@@ -23,7 +23,7 @@ const Google = () => {
         .catch(error => {
             console.log(error);
         })
-        navigate("/")
+        // navigate("/")
     }
 
     const handleGithubSignIn = () => {
@@ -37,7 +37,7 @@ const Google = () => {
             console.log(error)
         })
         
-        navigate("/")
+       
     }
 
     const handleSignOut = () => {
@@ -62,9 +62,9 @@ const Google = () => {
                        
                     </>
             }
-            {user && <div>
-                <Home></Home>
-            </div>
+            {user && 
+                 navigate("/")
+            
             }
         </div>
     );
