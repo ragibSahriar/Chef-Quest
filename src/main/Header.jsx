@@ -1,39 +1,51 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
+// import { useHistory } from 'react-router';
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
-  return (
-    <div>
-      <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
-        </div>
-        <div className="flex-none gap-2">
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered"
-            />
-          </div>
-          <Link to="/register">Register</Link>
-        </div>
+  const { user,logOut } = useContext(AuthContext);
+// const history = useHistory();
 
-        {user?.email ? (
-          <li>
-            <button onClick={handleLogout}>Logout</button>
+
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch((err)=>{
+        console.log(err);
+        // history.push("/");
+    });
+  };
+  return (
+   
+      <div className="bg-sky-100 flex justify-around   mx-auto items-center">
+        <div className="">
+          <a className="btn btn-ghost normal-case text-xl">Chef's Quest</a>
+        </div>
+        <div>
+            <NavLink className="btn btn-ghost normal-case text-xl">
+            Home
+            </NavLink>
+            <NavLink className="btn btn-ghost normal-case text-xl">Blog</NavLink>
+        </div>
+        
+
+        <div>
+        {user? (
+            <li className="btn btn-primary">
+            <button onClick={handleLogOut}>Logout</button>
+                {/* <li>{user?.email}</li> */}
           </li>
         ) : (
           <Link to="/login">
-            <li>Login</li>
+            <li className="btn btn-primary">Login</li>
           </Link>
-        )}
-       
+          
+          )}
+        </div>
+        <img className="w-12 rounded-3xl" src={user?.photoURL}/>
       </div>
-    </div>
+    // </div>
   );
 };
-
 export default Header;
