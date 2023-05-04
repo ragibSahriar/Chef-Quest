@@ -7,12 +7,10 @@ import { AuthContext } from "../AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Google from "./Google";
 
-// import { useLocation, useHistory, useNavigate } from "react-router";
+
 const Login = () => {
     const { loginUSer } = useContext(AuthContext);
-  // const location = useLocation();
-  // const history = useHistory();
-  // let navigate = useNavigate();
+
   const navigate = useNavigate();
 
 

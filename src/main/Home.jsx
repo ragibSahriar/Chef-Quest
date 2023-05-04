@@ -14,8 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      {/* banner ////////// */}
+    <div className="bg-black">
       <div>
         <div
           className="hero min-h-screen"
@@ -34,8 +33,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h4>All chefs {chefs.length}</h4>
+      <div className="bg-black mt-4">
         <div className="grid lg:grid-cols-3 md:grid-cols-3  container mx-auto gap-2">
         {
           chefs.map(chef => <Chefs
@@ -47,11 +45,19 @@ const Home = () => {
         </div>
 <div>
 
-<Marquee  className="mt-8 bg-slate-400 p-4">
+<Marquee  className="mt-8 bg-purple-900 p-4">
 <div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
-<div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
-<div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
+<div className="w-64 mx-12"><img src="https://d37b3blifa5mva.cloudfront.net/000_clients/127056/page/127056Drgxqz3h.jpg" alt="" /></div>
+<div className="w-64 mx-12"><img src="https://images.pexels.com/photos/1026691/pexels-photo-1026691.jpeg?cs=srgb&dl=curry-delicious-food-delicious-indian-food-indian-cuisine-1026691.jpg&fm=jpg" alt="" /></div>
 </Marquee>
+</div>
+
+<div className="text-center">
+
+<p className="text-2xl font-bold"> About Us</p>
+  <p className="text-xl text-gray-500">
+  Our website features a wide variety of recipes ranging from traditional classics to innovative, contemporary <br /> dishes. Whether you're a seasoned home cook or just starting out, our step-by-step tutorials <br /> You will get All chefs details here. Thank You.
+  </p>
 </div>
 
       <Footer></Footer>

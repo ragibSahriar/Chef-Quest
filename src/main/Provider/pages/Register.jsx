@@ -1,11 +1,6 @@
-/* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
-// import SocialLoginBtn from "./../SocialLoginBtn/SocialLoginBtn";
-
-
-
 
 
 
@@ -29,6 +24,7 @@ const Register = () => {
         registerUser(email, password)
         .then((result) => {
             console.log(result.user);
+            navigate("/")
         })
         .catch((err) => {
           console.log(err.message);
