@@ -7,7 +7,7 @@ const Home = () => {
   const [chefs, setChefs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allData")
+    fetch("https://chefs-quest-server-seebsk9-gmailcom.vercel.app/allData")
       .then((res) => res.json())
       .then((data) => setChefs(data))
       .catch((err) => console.error(err));
@@ -25,9 +25,7 @@ const Home = () => {
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Chefs Quest</h1>
               <p className="mb-5">
-                Join the ultimate culinary adventure - where top chefs take on
-                the wild to source the freshest, most flavorful ingredients.
-                Follow their journey as they hunt for the perfect dish!
+                Meet all the Italian Best chefs out there!!
               </p>
             </div>
           </div>
@@ -54,7 +52,7 @@ const Home = () => {
 
 <div className="text-center">
 
-<p className="text-2xl font-bold"> About Us</p>
+<p className="text-2xl text-white font-bold"> About Us</p>
   <p className="text-xl text-gray-500">
   Our website features a wide variety of Italian recipes ranging from traditional classics to innovative, contemporary <br /> dishes. Whether you're a seasoned home cook or just starting out, our step-by-step tutorials <br /> You will get All chefs details here. Thank You.
   </p>
