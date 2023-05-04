@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Chefs from "./Provider/pages/chefs/Chefs";
 import Footer from "./Footer";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -44,6 +45,15 @@ const Home = () => {
           </Chefs>)
         }
         </div>
+<div>
+
+<Marquee  className="mt-8 bg-slate-400 p-4">
+<div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
+<div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
+<div className="w-64 mx-12"><img src="https://th.bing.com/th/id/R.3102fc240b584dcef15c0336de677474?rik=fYsjbfX%2f9dGceA&pid=ImgRaw&r=0" alt="" /></div>
+</Marquee>
+</div>
+
       <Footer></Footer>
       </div>
     </div>
