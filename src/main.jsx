@@ -13,8 +13,8 @@ import Register from './main/Provider/pages/Register.jsx';
 import Login from './main/Provider/pages/Login.jsx';
 import Google from './main/Provider/pages/Google.jsx';
 import Chef from './main/Provider/pages/chefs/Chef.jsx';
-// import Error from './main/Provider/pages/chefs/Error.jsx';
 import Blogs from './main/Blogs.jsx';
+import Error from './Error.jsx';
 
 
 
@@ -45,10 +45,10 @@ const router = createBrowserRouter([
         element: <Chef/>,
         loader:({params})=>fetch(`http://localhost:5000/allData/${params.id}`)
       },
-      // {
-      //   path: "/*",
-      //   element: <Error/>,
-      // },
+      {
+        path: "*",
+        element: <Error/>,
+      },
       {
         path: "/blog",
         element: <Blogs/>,

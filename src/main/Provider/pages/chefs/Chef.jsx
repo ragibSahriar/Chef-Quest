@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import Card from './Card';
 // import Recipe from './Recipe';
 
 
@@ -21,11 +22,15 @@ console.log(chef.recipes);
       <p className="py-2">Experience: {chef.experience_years} years</p>
       
     </div>
-    <div>
-       
-    </div>
   </div>
 </div>
+    <div className='flex container mx-auto'>
+       {
+        chef.recipes.map(cards => <Card
+        cards ={cards}
+        ></Card>)
+       }
+    </div>
 
 
         </div>
