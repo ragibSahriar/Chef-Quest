@@ -56,7 +56,7 @@ const Home = () => {
 
 <p className="text-2xl font-bold"> About Us</p>
   <p className="text-xl text-gray-500">
-  Our website features a wide variety of recipes ranging from traditional classics to innovative, contemporary <br /> dishes. Whether you're a seasoned home cook or just starting out, our step-by-step tutorials <br /> You will get All chefs details here. Thank You.
+  Our website features a wide variety of Italian recipes ranging from traditional classics to innovative, contemporary <br /> dishes. Whether you're a seasoned home cook or just starting out, our step-by-step tutorials <br /> You will get All chefs details here. Thank You.
   </p>
 </div>
 
