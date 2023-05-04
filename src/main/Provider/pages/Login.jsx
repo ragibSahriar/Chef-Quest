@@ -20,13 +20,14 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = (event) => {
-      navigate("/")
+      
     event.preventDefault();
     if ((email, password)) {
         loginUSer(email, password)
         .then((result) => {
           console.log(result.user);
         //   redirect("/");
+        navigate("/")
         })
         .catch((error) => {
           console.log(error.message);

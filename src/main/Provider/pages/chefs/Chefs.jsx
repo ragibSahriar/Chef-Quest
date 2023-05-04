@@ -1,42 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Chefs = (props) => {
-  const { id, name, picture, experience_years, total_recipe, likes } = props.chef;
-
-
-//   Chef Picture
-
-//   Chef Name
   
-//   Years of experience
-  
-//   Numbers of recipes
-  
-//   Likes
-  
-//   View Recipes Button
+ 
+const { id, name, picture, experience_years, total_recipe, likes } =props.chef;
+console.log(id);
 
   return (
     <div>
-      <div className="col-span-">
-      <div className="card card-side bg-base-100 shadow-xl">
-        <figure>
-          <img className="w-25"
-            src={picture}
-            alt="Movie"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <h3>Years of experience: {experience_years}</h3>
-          <h3>Number of recipes {total_recipe}</h3>
-          <h3>Likes: {likes}</h3>
-          <button>
-          View Recipes Button
-          </button>
-        </div>
-      </div>
-      </div>
+      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+  <figure><img className=" h-64" src={picture} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">{name}</h2>
+    <h1><p className="text-xl font-semibold">Years of experience: <span>{experience_years}  </span></p> </h1>
+    <h1><p className="text-xl font-semibold">Numbers of recipes: <span>{total_recipe}</span>{}</p> </h1>
+    <h1><p className="text-xl font-semibold">Likes: <span>{likes}</span></p> </h1>
+    <div className="card-actions justify-end">
+      
+    <Link to={`/chef-recipes/${id}`} className="badge badge-primary p-4">
+            View Recipes
+          </Link>
+    
+    </div>
+  </div>
+</div>
     </div>
   );
 };

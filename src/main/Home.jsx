@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Chefs from "./Provider/pages/chefs/Chefs";
+import Footer from "./Footer";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -43,6 +44,7 @@ const Home = () => {
           </Chefs>)
         }
         </div>
+      <Footer></Footer>
       </div>
     </div>
   );

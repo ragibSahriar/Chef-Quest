@@ -29,7 +29,7 @@ const Header = () => {
             <NavLink className="btn btn-ghost normal-case text-xl">
             Home
             </NavLink>
-            <NavLink className="btn btn-ghost normal-case text-xl">Blog</NavLink>
+            <NavLink to="blog" className="btn btn-ghost normal-case text-xl">Blog</NavLink>
         </div>
         
 
