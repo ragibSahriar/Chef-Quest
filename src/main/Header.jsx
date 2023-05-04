@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
-// import { useHistory } from 'react-router';
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
 
@@ -51,7 +50,6 @@ const Header = () => {
       </div>
       
      </div>
-    // </div>
   );
 };
 export default Header;

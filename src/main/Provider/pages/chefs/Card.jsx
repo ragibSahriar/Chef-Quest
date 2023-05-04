@@ -13,14 +13,14 @@ setIsClicked(true);
     }
 
     console.log(props.cards);
-    const {recipe_name,ingredients,cooking_method, } = props.cards;
+    const {recipe_name,ingredients,cooking_method, recipe_img} = props.cards;
 
     
 
     return (
         <div className='mx-2'>
            <div className="card w-96 bg-black text-white shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src={recipe_img} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     <p>{recipe_name}</p>
