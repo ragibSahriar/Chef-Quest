@@ -18,7 +18,7 @@ const Home = () => {
       <div>
         <div
           className="hero min-h-screen"
-          style={{ backgroundImage: "url('/src/assets/banner-2.jpg')" }}
+          style={{ backgroundImage: "url('https://th.bing.com/th/id/R.1dde3237df83c2b982dc189ad378904a?rik=kXvnHjeqeCu%2bTA&pid=ImgRaw&r=0" }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
