@@ -24,7 +24,7 @@ const Header = () => {
         <div className="">
           <a className="btn btn-ghost normal-case text-xl">Chef's Quest</a>
         </div>
-        <div className=" flex items-center">
+        <div className=" flex items-center mx-auto space-x-4">
             <ActiveLink to="/" className="btn normal-casetext-xl">
             Home
             </ActiveLink>
@@ -38,9 +38,9 @@ const Header = () => {
             <button onClick={handleLogOut}>Logout</button>
           </li>
         ) : (
-          <Link to="/login">
+          <ActiveLink to="/login">
             <li className="btn btn-primary">Login</li>
-          </Link>
+          </ActiveLink>
           
           )}
         </div>

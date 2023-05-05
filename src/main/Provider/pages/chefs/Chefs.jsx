@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { useParams } from "react-router-dom";
-import CircleLoader from "react-spinners/ClipLoader";
+
 const Chefs = (props) => {
 
-  const [loading, setLoading] = useState(false);
-
-
- 
 const { id, name, picture, experience_years, total_recipe, likes } =props.chef;
 console.log(id);
 
