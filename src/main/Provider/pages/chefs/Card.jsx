@@ -20,7 +20,7 @@ setIsClicked(true);
     return (
         <div className='mx-2'>
            <div className="card w-96 bg-black text-white shadow-xl">
-  <figure><img className="object-cover object-center h-64 w-full" src={recipe_img} alt="Shoes" /></figure>
+  <figure><img className="object-cover object-center h-64 w-full" src={recipe_img} alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     <p>{recipe_name}</p>

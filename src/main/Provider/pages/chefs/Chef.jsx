@@ -10,8 +10,8 @@ const {id} = useParams();
 const chef = useLoaderData();
 console.log(chef.recipes);
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className='bg-slate-950'>
+            <div className="hero min-h-screen bg-base-200 bg-slate-950">
   <div className="hero-content flex-col lg:flex-row bg-black text-white">
     <img src={chef.picture} />
     <div>
@@ -24,7 +24,7 @@ console.log(chef.recipes);
     </div>
   </div>
 </div>
-    <div className='flex container mx-auto'>
+    <div className='flex justify-around container mx-auto'>
        {
         chef.recipes.map(cards => <Card
         cards ={cards}
